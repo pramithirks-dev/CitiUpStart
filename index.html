@@ -515,7 +515,7 @@
     <!-- Hero -->
     <section class="hero">
         <h2>Project Progress Tracker</h2>
-        <p>Tracking our 16-week journey through the MedTrix project. Click any week card or share its link directly.</p>
+        <p>Tracking our 16-week journey building an AI-powered elderly care monitoring platform. Click any week card or share its link directly.</p>
         <div class="progress-bar-container">
             <div class="progress-bar">
                 <div class="progress-fill"></div>
@@ -529,7 +529,7 @@
         <h3 class="section-title">Weekly Reports</h3>
         <div class="weeks-grid">
 
-            <!-- Week 1 -->
+            <!-- Week 1: Project Setup & Infrastructure -->
             <div class="week-card in-progress" id="week-1">
                 <div class="week-card-header">
                     <div>
@@ -538,24 +538,24 @@
                     </div>
                     <span class="status-badge status-in-progress">In Progress</span>
                 </div>
-                <p class="week-summary">Project kickoff and initial planning. Setting up team workflows, defining scope, and establishing communication channels.</p>
+                <p class="week-summary">Project kickoff, repository setup, and infrastructure planning. Defining the MedTrix system architecture and tech stack (React Native, Node.js, Python, PostgreSQL).</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Team formation and role assignment</li>
-                        <li>Project charter drafted</li>
-                        <li>Initial requirements gathering</li>
+                        <li>Project repo &amp; CI/CD pipeline initialized</li>
+                        <li>AWS infrastructure provisioning (VPC, ECS, RDS, S3)</li>
+                        <li>PRD finalized &mdash; MVP scope locked</li>
                     </ul>
                 </div>
                 <div class="blockers">
                     <h4>Blockers</h4>
                     <ul>
-                        <li>Awaiting access to project resources</li>
+                        <li>Awaiting AWS account credentials and IAM roles</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 2 -->
+            <!-- Week 2: Auth & User Management -->
             <div class="week-card upcoming" id="week-2">
                 <div class="week-card-header">
                     <div>
@@ -564,18 +564,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Requirements analysis and stakeholder interviews. Documenting functional and non-functional requirements.</p>
+                <p class="week-summary">Authentication system implementation. JWT-based auth with refresh tokens, user registration/login, and role-based access control (Caregiver, Family, Provider, Admin).</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Stakeholder meetings scheduled</li>
-                        <li>Requirements document template prepared</li>
-                        <li>Research into existing solutions</li>
+                        <li>JWT auth with 15-min access token + refresh flow</li>
+                        <li>User &amp; patient database schema (PostgreSQL)</li>
+                        <li>HIPAA-compliant password hashing (bcrypt, cost 12)</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 3 -->
+            <!-- Week 3: Edge Device Integration -->
             <div class="week-card upcoming" id="week-3">
                 <div class="week-card-header">
                     <div>
@@ -584,18 +584,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">System architecture design and technology stack selection. Creating high-level design documents.</p>
+                <p class="week-summary">Android edge device setup and camera integration. Configuring AI SDK on-device, establishing camera input pipeline, and local SQLite event storage.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Architecture diagram creation</li>
-                        <li>Technology evaluation matrix</li>
-                        <li>Development environment setup</li>
+                        <li>Android edge device app scaffold (Kotlin)</li>
+                        <li>Camera input pipeline (USB/IP cam support)</li>
+                        <li>Local SQLite database for offline event queuing</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 4 -->
+            <!-- Week 4: Event Pipeline & Cloud Sync -->
             <div class="week-card upcoming" id="week-4">
                 <div class="week-card-header">
                     <div>
@@ -604,18 +604,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">UI/UX wireframing and prototyping. Designing user flows and creating interactive mockups.</p>
+                <p class="week-summary">Event pipeline connecting edge devices to the cloud backend. Real-time sync service, message queue (Redis Streams), and event processing engine.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Wireframe designs for key screens</li>
-                        <li>User journey mapping</li>
-                        <li>Design system foundations</li>
+                        <li>Edge-to-cloud sync service (online: real-time, offline: queue)</li>
+                        <li>Event processor (Python FastAPI) with message queue</li>
+                        <li>Device heartbeat &amp; online/offline status tracking</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 5 -->
+            <!-- Week 5: Fall Detection AI & Dashboard -->
             <div class="week-card upcoming" id="week-5">
                 <div class="week-card-header">
                     <div>
@@ -624,18 +624,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Backend development sprint 1. Setting up core API endpoints and database schema.</p>
+                <p class="week-summary">Fall detection AI model integration (MoveNet Thunder for pose estimation) and caregiver dashboard with real-time patient status cards.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Database schema design</li>
-                        <li>API endpoint scaffolding</li>
-                        <li>Authentication module setup</li>
+                        <li>MoveNet Thunder (TFLite) on-device pose estimation</li>
+                        <li>Fall detection algorithm: torso height drop &gt;40% in &lt;1s</li>
+                        <li>React Native dashboard with patient status card</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 6 -->
+            <!-- Week 6: Alert System & Push Notifications -->
             <div class="week-card upcoming" id="week-6">
                 <div class="week-card-header">
                     <div>
@@ -644,18 +644,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Frontend development sprint 1. Building core UI components and establishing the component library.</p>
+                <p class="week-summary">Priority-based alert system and Firebase Cloud Messaging push notifications. Critical fall alerts repeat every 2 min until acknowledged.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Component library setup</li>
-                        <li>Landing page development</li>
-                        <li>Navigation and routing</li>
+                        <li>4-tier alert priority: Critical, Urgent, Warning, Info</li>
+                        <li>FCM push notifications (iOS + Android)</li>
+                        <li>Alert acknowledgement flow &amp; escalation logic</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 7 -->
+            <!-- Week 7: Medication Verification -->
             <div class="week-card upcoming" id="week-7">
                 <div class="week-card-header">
                     <div>
@@ -664,18 +664,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Integration testing and API refinement. Connecting frontend with backend services.</p>
+                <p class="week-summary">AI-powered medication verification using computer vision. Object detection for pills, pill classification, and hand-to-mouth intake gesture recognition.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Frontend-backend integration</li>
-                        <li>API contract validation</li>
-                        <li>Error handling implementation</li>
+                        <li>Pill detection pipeline: Object Detection &rarr; Classify &rarr; Action Detection</li>
+                        <li>Medication schedule management (CRUD, daily/custom times)</li>
+                        <li>Adherence calculation: (Doses Taken / Scheduled) &times; 100%</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 8 -->
+            <!-- Week 8: Activity Log & Medication Tracking UI -->
             <div class="week-card upcoming" id="week-8">
                 <div class="week-card-header">
                     <div>
@@ -684,18 +684,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Mid-project review and pivot assessment. Evaluating progress against milestones.</p>
+                <p class="week-summary">Chronological activity log with event filtering and medication tracking UI. Caregiver can view all events, filter by type/date, and export PDF/CSV reports.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Mid-term presentation prep</li>
-                        <li>Progress evaluation report</li>
-                        <li>Scope reassessment</li>
+                        <li>Activity timeline with 9 event types (fall, medication, activity, system)</li>
+                        <li>Filtering by date range, event type, and location</li>
+                        <li>Weekly medication adherence percentage display</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 9 -->
+            <!-- Week 9: Video Clip Capture -->
             <div class="week-card upcoming" id="week-9">
                 <div class="week-card-header">
                     <div>
@@ -704,18 +704,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Feature development sprint 2. Implementing advanced features and business logic.</p>
+                <p class="week-summary">On-demand video clip capture system. 30-second clips around fall events (-10s before, +20s after), 10-second clips for medication events, stored on AWS S3.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Advanced feature implementation</li>
-                        <li>Business logic refinement</li>
-                        <li>Data validation layer</li>
+                        <li>Rolling buffer for pre-event video capture</li>
+                        <li>H.264 MP4 encoding at 720p, upload to S3</li>
+                        <li>Presigned URL access (1-hour expiry, AES-256 encryption)</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 10 -->
+            <!-- Week 10: Video Playback & Offline Mode -->
             <div class="week-card upcoming" id="week-10">
                 <div class="week-card-header">
                     <div>
@@ -724,18 +724,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">AI/ML model integration and testing. Incorporating intelligent features into the platform.</p>
+                <p class="week-summary">In-app video clip playback, false positive reporting, and offline resilience mode. Local AI detection continues without internet; events sync on reconnect.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>ML model evaluation</li>
-                        <li>Model integration pipeline</li>
-                        <li>Performance benchmarking</li>
+                        <li>Clip viewer with download &amp; false positive reporting</li>
+                        <li>Offline mode: local detection + up to 1GB clip storage</li>
+                        <li>Sync-on-reconnect: queue upload events oldest-first</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 11 -->
+            <!-- Week 11: Testing & QA -->
             <div class="week-card upcoming" id="week-11">
                 <div class="week-card-header">
                     <div>
@@ -744,18 +744,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">User testing and feedback collection. Running usability sessions and gathering insights.</p>
+                <p class="week-summary">Comprehensive testing across all modules. Targeting &gt;90% fall detection sensitivity, &lt;5 false positives/day, &gt;85% medication verification accuracy, and &lt;10s alert delivery.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Usability testing sessions</li>
-                        <li>Feedback analysis</li>
-                        <li>Iteration planning based on feedback</li>
+                        <li>End-to-end testing: fall detection &rarr; clip &rarr; alert &rarr; app</li>
+                        <li>AI model accuracy benchmarking against MVP targets</li>
+                        <li>Security audit: HIPAA compliance, TLS 1.3, encryption</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 12 -->
+            <!-- Week 12: Bug Fixes & Beta Launch -->
             <div class="week-card upcoming" id="week-12">
                 <div class="week-card-header">
                     <div>
@@ -764,18 +764,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Bug fixes and optimization. Addressing feedback and improving performance.</p>
+                <p class="week-summary">Bug fixes, performance optimization, and beta launch to 50 families. Targeting app crash rate &lt;1%, API p95 &lt;200ms, and cold start &lt;3 seconds.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Bug triage and resolution</li>
-                        <li>Performance optimization</li>
-                        <li>Code quality improvements</li>
+                        <li>Critical bug triage and resolution</li>
+                        <li>Performance tuning (API response, clip upload &lt;30s)</li>
+                        <li>MVP beta launch &mdash; onboarding first 50 families</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 13 -->
+            <!-- Week 13: Multi-Patient & Family Sharing (Phase 2) -->
             <div class="week-card upcoming" id="week-13">
                 <div class="week-card-header">
                     <div>
@@ -784,18 +784,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Security audit and deployment preparation. Hardening the application and setting up CI/CD.</p>
+                <p class="week-summary">Phase 2 begins: Multi-patient support (2&ndash;3 patients per account) and family sharing with role-based view access. Patient switching UI for caregivers.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Security review and fixes</li>
-                        <li>CI/CD pipeline configuration</li>
-                        <li>Deployment documentation</li>
+                        <li>Multi-patient support (Family mode: 1&ndash;3 patients)</li>
+                        <li>Invite family members with view-only access (no video)</li>
+                        <li>Patient switching bottom sheet UI</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 14 -->
+            <!-- Week 14: Enhanced Notifications & AI Improvement -->
             <div class="week-card upcoming" id="week-14">
                 <div class="week-card-header">
                     <div>
@@ -804,18 +804,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Final testing and QA sign-off. Comprehensive end-to-end testing across all modules.</p>
+                <p class="week-summary">Enhanced notifications with SMS fallback for critical alerts. AI model improvements using beta feedback data &mdash; targeting &gt;95% fall sensitivity and &lt;2 false positives/day.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>End-to-end test suite</li>
-                        <li>Regression testing</li>
-                        <li>QA sign-off checklist</li>
+                        <li>SMS fallback for critical fall alerts</li>
+                        <li>Retrained fall detection model from beta data</li>
+                        <li>Medication verification accuracy push toward 92%</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 15 -->
+            <!-- Week 15: Activity Patterns & Analytics -->
             <div class="week-card upcoming" id="week-15">
                 <div class="week-card-header">
                     <div>
@@ -824,18 +824,18 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Documentation and handover preparation. Writing user guides and technical documentation.</p>
+                <p class="week-summary">Weekly activity reports, trend analysis, and AI-generated insights for caregivers. Automated PDF/CSV export for healthcare providers.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>User documentation</li>
-                        <li>Technical documentation</li>
-                        <li>Handover package preparation</li>
+                        <li>Weekly activity pattern reports &amp; trend visualization</li>
+                        <li>AI insights: anomaly detection, behavioral patterns</li>
+                        <li>PDF/CSV export for clinical documentation</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Week 16 -->
+            <!-- Week 16: Final Review & Stakeholder Presentation -->
             <div class="week-card upcoming" id="week-16">
                 <div class="week-card-header">
                     <div>
@@ -844,13 +844,13 @@
                     </div>
                     <span class="status-badge status-upcoming">Upcoming</span>
                 </div>
-                <p class="week-summary">Final presentation and project delivery. Showcasing the completed project to stakeholders.</p>
+                <p class="week-summary">Final project review, stakeholder presentation, and Phase 3 roadmap. Showcasing MVP + Phase 2 results and planning for facility mode, vitals integration, and live streaming.</p>
                 <div class="week-details">
                     <h4>Key Highlights</h4>
                     <ul>
-                        <li>Final presentation rehearsal</li>
-                        <li>Project demo to stakeholders</li>
-                        <li>Retrospective and lessons learned</li>
+                        <li>Final demo to stakeholders and mentors</li>
+                        <li>Success metrics review (NPS, churn, accuracy targets)</li>
+                        <li>Phase 3 roadmap: facility mode, wearables, WebRTC live stream</li>
                     </ul>
                 </div>
             </div>
